@@ -22,6 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
+(function (exports) {
+
 const value_types = {
   func: 0x60,
   funcref: 0x70,
@@ -485,3 +487,7 @@ function wasm_module () {
 export const WASMBuilder = {
   module: wasm_module
 };
+
+})(
+  typeof module === "undefined" ? window : module.exports
+);

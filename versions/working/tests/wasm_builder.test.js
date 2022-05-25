@@ -26,10 +26,6 @@ mod.func()
           .local$get("b")
           .i32$add();
 
-test_mod(mod, function (mod) {
-  assert(mod.add_two(2, 3), 5, "simple adding function");
-});
-
 mod.func()
    .name("return_const")
    .result("i32")
@@ -43,5 +39,6 @@ mod.func()
           .call(0);
 
 test_mod(mod, function (mod) {
+  assert(mod.add_two(2, 3), 5, "simple adding function");
   assert(mod.call_functions(), 9, "call functions by name and index");
 });

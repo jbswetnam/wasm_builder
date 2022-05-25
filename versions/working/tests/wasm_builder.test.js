@@ -6,12 +6,14 @@
 const mod1 = WASMBuilder.module();
 
 test_mod(mod1, function (mod) {
+  console.log(mod);
   assert(true, "empty module compiles");
 });
 
 mod1.func();
 
 test_mod(mod1, function (mod) {
+  console.log(mod);
   assert(true, "empty function compiles");
 });
 

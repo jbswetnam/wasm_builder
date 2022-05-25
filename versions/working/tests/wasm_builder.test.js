@@ -27,5 +27,5 @@ mod.func()
            .i32$add();
 
 test_mod(mod, function (mod) {
-  assert(mod.addTwo(2, 3) === 5, "simple adding function");
+  assert(mod.addTwo(2, 3), 5, "simple adding function");
 });

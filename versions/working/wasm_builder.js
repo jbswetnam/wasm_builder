@@ -466,6 +466,7 @@ function wasm_module () {
         const section_spec = section_specs[label];
         const entry = section_entry(mod.sections[label], section_spec);
         code.push(...entry);
+        mod.sections[label].entries = [];
       }
       return code;
     },

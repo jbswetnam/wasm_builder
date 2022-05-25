@@ -6,17 +6,16 @@
     total++;
   };
   
-  exports.test_mod = function (module, msg, cb, imp) {
+  exports.test_mod = function (module, cb, imp) {
     module.instantiate(imp || {}).then(function (mod) {
-      try {
-        cb(mod);
-        console.log(`${msg}: ${failed.length} of ${total} tests failed`);
-        for (const f of failed) console.log(`Failed: ${f}`);
-      } catch (e) {
-        console.log(`${msg} failed: ${e}`);
-      }
+      cb(mod);
     });
   };
+  
+  exports.report = function () {
+    console.log(`${msg}: ${failed.length} of ${total} tests failed`);
+    for (const f of failed) console.log(`Failed: ${f}`);
+  }
 })(
   typeof module === "undefined" ? window : module.exports
 );

@@ -1,10 +1,12 @@
 # wasm_builder
 
-Build WASM modules programmatically in JavaScript
+Build WASM modules programmatically in JavaScript.
 
 ## Quick Start
 
-`wasm_builder` is a single-file utility. The easiest way to get started is to download the latest stable version into your project. On a Linux machine, you can use `wget`:
+`wasm_builder` is a single-file utility designed to work equally well in NodeJS or the browser.
+
+The easiest way to get started is to download the latest stable version into your project. On a Linux machine, you can use `wget`:
 ```
 wget https://raw.githubusercontent.com/jbswetnam/wasm_builder/main/versions/latest/wasm_builder.js
 ```

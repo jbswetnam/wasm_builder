@@ -4,7 +4,6 @@
   exports.assert = function (x, msg) {
     if (!x) failed.push(msg);
     total++;
-    console.log(total);
   };
   
   exports.test_mod = function (module, cb, imp) {

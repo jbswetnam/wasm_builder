@@ -1,4 +1,4 @@
-// uncomment if NodeJS:
+// uncomment the next line if running in NodeJS and modify the path to wasm_builder.js
 // const { WASMBuilder } = require("./path/to/wasm_builder.js");
 
 const my_mod = WASMBuilder.module();

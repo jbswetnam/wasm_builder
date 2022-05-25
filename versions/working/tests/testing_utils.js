@@ -1,5 +1,5 @@
 (function (exports) {
-  const failed = [], total = 0;
+  let failed = [], total = 0;
   
   exports.assert = function (x, msg) {
     if (!x) failed.push(msg);
@@ -8,9 +8,8 @@
   
   exports.test_mod = function (module, msg, cb, imp) {
     module.instantiate(imp || {}).then(function (mod) {
-      console.log(`running tests: ${msg}`);
       cb(mod);
-      console.log(`${failed.length} of ${total} tests failed`);
+      console.log(`${msg}: ${failed.length} of ${total} tests failed`);
       for (const f of failed) console.log(`Failed: ${f}`);
     });
   };

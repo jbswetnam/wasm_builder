@@ -94,7 +94,7 @@ function import_section_entry (e, {type_mappings}) {
   switch (e.label) {
     case "func": out.push(type_mappings[e.type_idx]); break;
     case "global": out.push(e.type, e.mutable); break;
-    case "memory": out.push(0, e.initial); break;
+    case "memory": out.push(0, e.minimum); break;
     case "table": out.push(e.element, 0, e.initial); break;
   }
   return out;
@@ -105,8 +105,8 @@ function table_section_entry (e) {
 }
 
 function memory_section_entry (m) {
-  if (m.max) return [1, m.initial, m.max];
-  return [0, m.initial];
+  if (m.maximum) return [1, m.minimum, m.maximum];
+  return [0, m.minimum];
 }
 
 function global_section_entry (g) {
@@ -355,12 +355,11 @@ def_section({
   import_export: true,
   entry_builder: memory_section_entry,
   init: function (data) {
-    data.initial = 1;
-    data.max = 1;
+    data.minimum = 1;
   },
   setters: {
-    initial: x => x,
-    max: x => x
+    minimum: x => x,
+    maximum: x => x
   }
 });
 

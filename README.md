@@ -6,7 +6,7 @@ Build WASM modules programmatically in JavaScript
 
 The easiest way is to download the latest stable version of wasm_builder.js into your project:
 ```
-wget https://raw.githubusercontent.com/jbswetnam/wasm_builder/main/releases/latest/wasm_builder.js
+wget https://raw.githubusercontent.com/jbswetnam/wasm_builder/main/versions/latest/wasm_builder.js
 ```
 Then include it in a NodeJs file:
 ```js

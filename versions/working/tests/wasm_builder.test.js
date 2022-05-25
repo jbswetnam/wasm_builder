@@ -1,7 +1,7 @@
-// uncomment and modify path as needed in NodeJS:
-// const { WASMBuilder } = require("../wasm_builder.js");
-// you will also need the utils file in NodeJS:
-// const { test_mod, assert } = require("./testing_utils.js")
+// modify path as needed in NodeJS:
+const { WASMBuilder } = typeof window === "undefined" ? require("../wasm_builder.js") : window;
+// you will also need to download the utils file in NodeJS:
+const { test_mod, assert } = typeof window === "undefined" ? require("./testing_utils.js") : window;
 
 let mod = WASMBuilder.module();
 

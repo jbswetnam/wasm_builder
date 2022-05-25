@@ -20,7 +20,7 @@ Or an HTML file:
   const my_mod = WASMBuilder.module();
 </script>
 ```
-See the [demo folder](./demo) for a full HTML example. You can view the demo live [here](https://jbswetnam.github.io/wasm_builder/demo/demo.html).
+See the [demo folder](versions/latest/demo) for a full HTML example. You can view the demo live [here](https://jbswetnam.github.io/wasm_builder/versions/latest/demo/demo.html).
 
 ## Usage
 

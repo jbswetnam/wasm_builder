@@ -8,3 +8,9 @@ const mod1 = WASMBuilder.module();
 test_mod(mod1, "empty module", function (mod) {
   assert(true, "empty module compiles");
 });
+
+mod1.func();
+
+test_mod(mod2, "empty function", function (mod) {
+  assert(true, "empty function compiles");
+});

@@ -484,7 +484,7 @@ function wasm_module () {
   return out;
 }
 
-export const WASMBuilder = {
+exports.WASMBuilder = {
   module: wasm_module
 };
 

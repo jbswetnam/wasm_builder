@@ -448,11 +448,11 @@ function wasm_module () {
     },
     type_mappings: [],
     accum: {
-		  type_idx: 0,
-		  func_idx: 0,
-		  glob_idx: 0
-	  },
-	  sections: {},
+      type_idx: 0,
+      func_idx: 0,
+      glob_idx: 0
+    },
+    sections: {},
     entries: []
   };
   const out = {

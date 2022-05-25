@@ -1,8 +1,13 @@
 (function (exports) {
   let failed = [], total = 0, mods = 0;
   
-  exports.assert = function (x, msg) {
-    if (!x) failed.push(msg);
+  exports.assert = function (a, b, c) {
+    let passed = a, msg = b;
+    if (c) {
+      passed = a === b;
+      msg = `${msg}: expected ${a}, got ${b}`;
+    }
+    if (!passed) failed.push(msg);
     total++;
   };
   

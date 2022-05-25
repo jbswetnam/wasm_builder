@@ -9,7 +9,7 @@ test_mod(mod, function (mod) {
   assert(mod, "empty module compiles");
 });
 
-mod1.func();
+mod.func();
 
 test_mod(mod, function (mod) {
   assert(mod, "empty function compiles");

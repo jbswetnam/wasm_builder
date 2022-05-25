@@ -11,6 +11,6 @@ test_mod(mod1, "empty module", function (mod) {
 
 mod1.func();
 
-test_mod(mod2, "empty function", function (mod) {
+test_mod(mod1, "empty function", function (mod) {
   assert(true, "empty function compiles");
 });

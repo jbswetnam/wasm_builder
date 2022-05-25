@@ -13,7 +13,7 @@
   };
   
   exports.test_report = function () {
-    console.log(`${msg}: ${failed.length} of ${total} tests failed`);
+    console.log(`${failed.length} of ${total} tests failed`);
     for (const f of failed) console.log(`Failed: ${f}`);
   }
 })(
